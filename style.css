@@ -1,0 +1,113 @@
+
+BODY { 
+    background: #ffffff;
+    }
+
+.container{
+    margin-top: 850px;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+}
+
+#table{
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
+.DataGame{
+    margin-top: 10px;
+    width: auto;
+    height: auto;
+
+}
+
+.egt{
+    margin: 0 auto; 
+    
+}
+.infoCell{
+    width: 70px;
+}
+
+td{
+    
+    text-align: center;
+    padding: 0.5rem;
+}
+
+a{
+    width: 30%;
+    padding: 50px;
+}
+
+.image-preview__image{
+    
+    height: 500px;
+    width: 500px;
+}
+
+#fondo {
+	opacity: 0.3;
+}
+
+#myImage{}
+
+.contenido{
+    width: 40%;
+    height: 40%;
+    margin: auto;
+    background: yellow;
+    border-radius: 10px;
+}
+
+.frmModal{
+    margin-top: 50px;
+    height: auto;
+    width:420px;
+    align-items: center;
+}
+.inputModal{
+    margin: 20px;
+    margin-right: 50px;
+}
+
+.imageUser{
+    width: 60px;
+    height: 60px;
+}
+.foto{
+    margin-left: 80px;
+}
+
+
+
+.tile1, .tile2, .tile3, .tile4, .tile5, .tile6, .tile7, .tile8, .tile9 {
+  display: table-cell;
+  width: 120px;
+  height: 120px;
+  border: 1px solid white;
+  background: url(https://www.101computing.net/wp/wp-content/uploads/flower.png); 
+  cursor: pointer;
+}
+
+.tile1 {background-position: left top;}
+.tile2 {background-position: center top;}
+.tile3 {background-position: right top;}
+.tile4 {background-position: left center;}
+.tile5 {background-position: center center;}
+.tile6 {background-position: right center;}
+.tile7 {background-position: left bottom;}
+.tile8 {background-position: center bottom;}
+.tile9 {background: white; cursor: default;}
+
+
+    .gif{
+        width: 200px;
+        height: 200px;
+        margin-left: 120px;
+    }

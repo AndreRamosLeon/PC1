@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <title>Le Rompecabezas Mistico</title>
+
+    <script type="text/javascript">
+        $(window).on('load',function(){
+          $('#myModal').modal('show');
+        });
+    </script>
+  </head>
+  <body>
+   
+    
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Bienvenido al Rompecabezas Mistico</h5>
+              <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button> -->
+            </div>
+            <div class="modal-body">
+              <img src="imagenes/b34dc46496ae1a210ab53c6ec733b3f0.gif" class="gif" alt="" id="gif">
+              <div class="frmModal">
+                <form action="" >
+                  <input type="text" class="form-control inputModal" id="nombre" placeholder="Ingresar Nombre">
+                  <input type="text" class="form-control inputModal" id="edad" placeholder="Ingresar Edad">
+                          <input type="file" name="inpFile" id="myImg" >
+                  <!-- <table class="foto">
+                    <tr>
+                      <td><img src="imagenes/1.png" class="imageUser" alt=""></td>
+                      <td><img src="imagenes/2.png" class="imageUser" alt=""></td>
+                      <td><img src="imagenes/3.png" class="imageUser" alt=""></td>
+                      <td><img src="imagenes/4.png" class="imageUser" alt=""></td>
+                    </tr>
+                   
+                  </table> -->
+                </form>
+              </div>
+             
+             
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal"  >Aceptar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+<div class="container">
+
+    <h1>El Rompecabezas Mistico</h1>
+    <h2 id="ttt"></h2>
+
+    <div class="btnChosse_NewGame">
+        
+        <input type="file" name="inpFile" id="add-img">
+        <button onClick="shuffle();" id="btnEmpezar">New Game</button>
+        <button onclick="chronoReset()">Reiniciar</button>
+    </div>
+
+
+
+    <div id="table" style="display: table;">
+      <div id="row1" style="display: table-row;">
+        <div id="cell11" class="tile1" onClick="clickTile(1,1); CountFun();"></div>
+        <div id="cell12" class="tile2" onClick="clickTile(1,2);CountFun();"></div>
+        <div id="cell13" class="tile3" onClick="clickTile(1,3);CountFun();"></div>
+     </div>
+     <div id="row2" style="display: table-row;">
+        <div id="cell21" class="tile4" onClick="clickTile(2,1);CountFun();"></div>
+        <div id="cell22" class="tile5" onClick="clickTile(2,2);CountFun();"></div>
+        <div id="cell23" class="tile6" onClick="clickTile(2,3);CountFun();"></div>
+     </div>
+     <div id="row3" style="display: table-row;">
+        <div id="cell31" class="tile7" onClick="clickTile(3,1);CountFun();"></div>
+        <div id="cell32" class="tile8" onClick="clickTile(3,2);CountFun();"></div>
+        <div id="cell33" class="tile9" onClick="clickTile(3,3);CountFun();"></div>
+     </div>
+   </div>
+
+ 
+    <div class="DataGame">
+      <table class="egt">
+            <tbody>
+                <tr>
+          
+                    <td><label><input type="checkbox" id="cbox1" value="first_checkbox" onclick="return false;"> Cargado</label></td>
+                
+                    <td><label>Movimientos realizados: </label></td>
+                
+                    <td> <span id="mov" class="infoCell"></span> </td>
+                
+                  </tr>
+                
+                  <tr>
+                
+                    <td></td>
+                
+                    <td><p>Tiempo trasnscurrido: </p></td>
+                
+                    <td>
+                        <span id="chronotime">00:00</span></td>
+                
+                  </tr>
+                
+            </tbody>
+            
+          </table>
+        </div> 
+
+
+    <div class="info">
+
+        <a href="#"  data-toggle="modal" data-target="#instructionsModal">
+            Instrucciones
+        </a>
+        <a href="#"  data-toggle="modal" data-target="#acercadeModal">
+            Acerca de
+        </a>
+        <!-- <a href="#"  data-toggle="modal" data-target="#exampleModal">
+            Configurar cuenta
+        </a> -->
+</div>
+
+</div>
+
+
+
+
+
+  <div class="modal fade" id="instructionsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <li>Instrucciones
+            <ol>
+                <li>Para iniciar el juego de click en Juego Nuevo</li>
+                <li>Para mover las piezas de click sobre ellas</li>
+                <li>Para volver a jugar de click en</li>
+            </ol>
+        </li>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="acercadeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <li>Acerca de
+            <ol>
+                <li>Nombre: <span id="nombreac"></span></li>
+                <li>Edad: <span id="edadac"> </span></li>
+                <li>Imagen: <img id="myImage"> </li>
+
+            </ol>
+        </div>
+       
+      </div>
+    </div>
+  </div>
+  
+
+  <form name="chronoForm">
+      <input type="hidden" name="startstop" value="start!" onClick="chronoStart()" />
+      <input type="hidden" name="reset" value="reset!" onClick="" />
+  </form>
+
+	<script type="text/javascript" src="app.js"></script>
+
+    <!-- Optional JavaScriptl-->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
